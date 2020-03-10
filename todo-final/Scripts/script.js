@@ -6,17 +6,17 @@ ToDoClass = function () {
         this.tasks = [{
                 value: 'Go to Dentist',
                 isComplete: false,
-                deadline: (new Date()),
+                deadline: new Date(new Date().setDate(11)),
                 priority: 'Low',
-                isDeadlineValid: true,
+                isDeadlineStillValid: true,
                 isEditable: false
             },
             {
                 value: 'Do Gardening',
                 isComplete: true,
-                deadline: (new Date()),
+                deadline: new Date(new Date().setDate(21)),
                 priority: 'Medium',
-                isDeadlineValid: true,
+                isDeadlineStillValid: true,
                 isEditable: false
             },
             {
@@ -24,7 +24,7 @@ ToDoClass = function () {
                 isComplete: false,
                 deadline: new Date(new Date().setDate(2)),
                 priority: 'High',
-                isDeadlineValid: true,
+                isDeadlineStillValid: true,
                 isEditable: false
             },
         ];
@@ -74,14 +74,14 @@ ToDoClass = function () {
         document.getElementById('taskList').innerHTML = tasksHtml;
     }
     this.getStatus = function (task) {
-        task.isDeadlineValid = (new Date() - new Date(task.deadline)) > 0 ? true : false;
+        task.isDeadlineStillValid = (new Date() - new Date(task.deadline)) < 0 ? true : false;
         if (task.isComplete) {
             return 'list-group-item-success';
-        } else if (!task.isDeadlineValid) {
+        } else if (!task.isDeadlineStillValid) {
             return 'list-group-item-danger';
         }
 
-        if (!task.isComplete && task.isDeadlineValid) {
+        if (!task.isComplete && task.isDeadlineStillValid) {
             if (task.priority == "High") {
                 return 'list-group-item-info';
             } else if (task.priority == "Medium") {
@@ -144,11 +144,11 @@ ToDoClass = function () {
         let newTask = {
             value: task,
             isComplete: false,
-            deadline: new Date(new Date().setDate(3)),
+            deadline: new Date(new Date().setDate(29)),
             isComplete: false,
             priority: "High",
             isEditable: false,
-            isDeadlineValid: true           
+            isDeadlineStillValid: true           
         };
             this.tasks.push(newTask);
             this.loadTasks();
@@ -159,5 +159,4 @@ window.onload = function () {
     todo = new ToDoClass();
     todo.loadTasks();
     todo.addEventListeners();
-    // let tasksHtml = todo.tasks.reduce((html, task, index) => html += todo.generateTaskHtml(task, index), '');
 };
