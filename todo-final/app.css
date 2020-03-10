@@ -1,0 +1,27 @@
+﻿.background-image-poster {
+    min-height: 500px!important;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+}
+
+.bg-color {
+    background-color: #e3f2fd;
+}
+
+.list-group-item-goodToHave {
+    color: #365981;
+    background-color: mintcream;
+}
+
+.editable-frame {
+    color: #365981;
+    background-color: #cedef1;
+    padding: 4px;
+}

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo-App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div class="card text-center bg-color">
+        <div class="card-header">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <img src="images/logo.png"
+                         width="90" height="30"
+                            class="d-inline-block align-top m-l-50" alt="Logo">
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Webinar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Events</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                           Visit to explore more...
+                        </span>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="card-body background-image-poster">
+            <div class="container-fluid container-sm-height">
+                <div class="container mt-3">
+                    <h5>Add Todo list items, edit, delete, and set priorities</h5>
+                    <p>
+                        <input type="text" id="addTask" class="w-100" placeholder="     Add task (Enter to save)" />
+                    </p>
+                    <ul class="list-group" id="taskList">
+                        <!-- Placeholder for task lists -->
+                    </ul>
+                </div>               
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            <footer class="container-fluid">
+                <h2>We work with smart companies, from startups to enterprise.</h2>
+            </footer>
+        </div>
+        <script src="./Scripts/script.js"></script>
+</body>
+
+</html>
