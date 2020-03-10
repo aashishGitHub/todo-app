@@ -7,4 +7,5 @@ Features:
   Set/ update deadlines, 
     An expired task should show in danger-reddish
     A valid deadline, item should show in colors relative to Priorities, Blue, light-blue and yellow respectively for High, medium and low priorities.
-    A done task cannot be modified and is Green
+    A done task cannot be modified and is Green.
+    
