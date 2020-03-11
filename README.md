@@ -1,4 +1,6 @@
 # todo-app
+
+-   Hosted as https://adoring-dubinsky-e370a4.netlify.com/
 Done in Vanilla JavaScript , html, bootstrap 4 for css,  
 
 Features:
